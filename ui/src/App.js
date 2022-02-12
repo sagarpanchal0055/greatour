@@ -17,8 +17,10 @@ import { getCurrentUser } from "./store/currentUserStore/currentUserActions";
 import { addBookedTourData } from "./APIs/bookingTourApi";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./App.css";
+import "./mediaquery.css";
 
 const Login = React.lazy(() => import("./components/Login"));
+const SignUp = React.lazy(() => import("./components/SignUp"));
 const DetailTours = React.lazy(() => import("./components/DetailTours"));
 const Account = React.lazy(() => import("./components/Account"));
 
@@ -29,6 +31,8 @@ function App() {
   let [searchParams] = useSearchParams();
   const { userLoading } = useSelector((state) => state.currentUser);
   const { user } = useSelector((state) => state.user);
+  const { user: signupUser } = useSelector((state) => state.signup);
+
   const isLoggedIn = window.localStorage.getItem("isLoggedIn");
   const showHeaderFooter =
     location.pathname.includes("login") || location.pathname.includes("signup");
@@ -38,10 +42,9 @@ function App() {
     user: searchParams.get("user"),
     price: searchParams.get("price"),
   };
-
   useEffect(() => {
     dispatch(getCurrentUser());
-  }, [user]);
+  }, [user, signupUser]);
 
   useEffect(async () => {
     if (bookingData.tour && bookingData.user && bookingData.price) {
@@ -76,7 +79,7 @@ function App() {
               />
               <Route
                 path="/signup"
-                element={!isLoggedIn ? <Login /> : <Navigate to={"/"} />}
+                element={!isLoggedIn ? <SignUp /> : <Navigate to={"/"} />}
               />
 
               <Route path="/" element={<Home />} />

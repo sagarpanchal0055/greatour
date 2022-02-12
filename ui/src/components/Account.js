@@ -36,7 +36,7 @@ function Account() {
                   <svg>
                     <use xlinkHref={`img/icons.svg#icon-${el.icon}`}></use>
                   </svg>
-                  {el.text}
+                  <p>{el.text}</p>
                 </Link>
               </li>
             ))}
@@ -51,7 +51,7 @@ function Account() {
                       <svg>
                         <use xlinkHref={`img/icons.svg#icon-${el.icon}`}></use>
                       </svg>
-                      {el.text}
+                      <p>{el.text}</p>
                     </Link>
                   </li>
                 ))}

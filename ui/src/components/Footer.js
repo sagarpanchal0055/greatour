@@ -25,7 +25,7 @@ function Footer() {
         </li>
       </ul>
       <p className="footer__copyright">
-        &copy; by Jonas Schmedtmann. All rights reserved.
+        &copy; Made with Greatour. All rights reserved.
       </p>
     </footer>
   );

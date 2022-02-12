@@ -1,0 +1,168 @@
+/* Header */
+a {
+  text-decoration: none;
+}
+.header__bars {
+  display: none;
+}
+.mobNav {
+  display: none;
+}
+
+.header__bars button .css-i4bv87-MuiSvgIcon-root {
+  font-size: 3.5rem;
+}
+.MuiDrawer-root.MuiDrawer-docked.active.css-1f2xuhi-MuiDrawer-docked {
+  width: 0;
+}
+.cta__content {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .MuiDrawer-root.active {
+    display: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header__logo {
+    margin: 0;
+  }
+  .nav--tours,
+  .nav--user {
+    display: none;
+  }
+  .header__bars {
+    display: block;
+    font-size: large;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 900;
+  }
+  .header__bars button {
+    margin: 0;
+  }
+
+  .mobNav {
+    width: 80%;
+    display: block;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  .ac-d {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .ac-d button {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 900;
+    color: #07bc0c;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  a.ac-d img {
+    outline: 3px solid #07bc0c;
+  }
+  a.ac-d span {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .card-container {
+    display: block;
+    padding: 0 30px;
+  }
+  .card-container .card {
+    margin: 30px;
+  }
+
+  /* Details page */
+  .heading-primary {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .heading-secondary {
+    font-size: 1.5rem;
+  }
+  .cta__text {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .btn--green {
+    font-size: 1rem;
+  }
+  .cta__img {
+    height: 10rem;
+    width: 10rem;
+    left: 70px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .main {
+    padding: 0;
+  }
+  .card-container {
+    padding: 0;
+  }
+  .card-container .card {
+    margin: 15px;
+  }
+
+  .heading-primary {
+    font-size: 1.3rem;
+    padding: 3px;
+  }
+  .heading-box__detail {
+    font-size: 8px;
+  }
+  .section-description {
+    display: block;
+  }
+  .cta__content {
+    display: block;
+    margin: 15px;
+  }
+  .btn--green {
+    margin: 10px 0;
+  }
+  .cta {
+    max-width: 23rem;
+    padding: 4rem 3rem 9rem 2rem;
+  }
+  .footer__nav {
+    flex-wrap: wrap;
+  }
+
+  .side-nav a:link,
+  .side-nav a:visited {
+    padding: 1rem 1rem;
+  }
+  .side-nav svg {
+    height: 20px !important;
+    width: 20px;
+  }
+  .user-view__menu {
+    flex: 2rem 0;
+  }
+
+  .side-nav li a p {
+    font-size: 12px;
+  }
+}

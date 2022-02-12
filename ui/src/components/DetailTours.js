@@ -247,7 +247,7 @@ function DetailTours() {
             <div className="cta">
               <div className="cta__img cta__img--logo">
                 <img
-                  src="${process.env.REACT_APP_APP_URL}/img/logo-white.png"
+                  src={`${process.env.REACT_APP_APP_URL}/img/logo-white.png`}
                   alt="Natours logo"
                 />
               </div>
@@ -261,25 +261,26 @@ function DetailTours() {
                 src={`${process.env.REACT_APP_APP_URL}/img/tours/${tourData.images[2]}`}
                 alt="Tour Picture"
               />
-              <div className="cta__content">
-                <h2 className="heading-secondary">What are you waiting for?</h2>
-                <p className="cta__text">
-                  {tourData.duration} days. 1 adventure. Infinite memories. Make
-                  it yours today!
-                </p>
-                {currentUser.name ? (
-                  <button
-                    className="btn btn--green span-all-rows"
-                    onClick={bookTour}
-                  >
-                    Book tour now!
-                  </button>
-                ) : (
-                  <Link to="/login" className="btn btn--green span-all-rows">
-                    Login to book tour!
-                  </Link>
-                )}
-              </div>
+            </div>
+
+            <div className="cta__content">
+              <h2 className="heading-secondary">What are you waiting for?</h2>
+              <p className="cta__text">
+                {tourData.duration} days. 1 adventure. Infinite memories. Make
+                it yours today!
+              </p>
+              {currentUser.name ? (
+                <button
+                  className="btn btn--green span-all-rows"
+                  onClick={bookTour}
+                >
+                  Book tour now!
+                </button>
+              ) : (
+                <Link to="/login" className="btn btn--green span-all-rows">
+                  Login to book tour!
+                </Link>
+              )}
             </div>
           </section>
         </>

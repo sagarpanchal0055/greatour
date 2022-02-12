@@ -6,6 +6,7 @@ import { getCurrentUserReducer } from "./currentUserStore/currentUserReducer";
 import { userSettingReducer } from "./userSettingStore/userSettingReducer";
 import { updatedPasswordReducer } from "./updatePasswordStore/updatePasswordReducer";
 import { bookedTourReducer } from "./bookingStore/bookingTourReducer";
+import { signupReducer } from "./signupStore/singupReducer";
 
 const rootReducer = combineReducers({
   // Define a top-level state field named `todos`, handled by `todosReducer`
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   updatedUser: userSettingReducer,
   updatedPasswordUser: updatedPasswordReducer,
   bookedTour: bookedTourReducer,
+  signup: signupReducer,
 });
 
 export default rootReducer;

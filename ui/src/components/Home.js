@@ -20,10 +20,9 @@ function Home() {
     }
   }, [dispatch, bookingPage]);
 
-  console.log({ bookedTours });
-
   const showData =
     !bookingPage && tours.data ? tours.data.data : [...bookedTours];
+
   return (
     <section className="main">
       {toursLoading && !hasError && <LoadingSpinner />}

@@ -6,6 +6,7 @@ import currentUserSaga from "./currentUserStore/currentUserSaga";
 import userSettingSaga from "./userSettingStore/userSettingSaga";
 import updatePasswordSaga from "./updatePasswordStore/updatePasswordSaga";
 import bookedTourSaga from "./bookingStore/bookingTourSaga";
+import signupSaga from "./signupStore/singupSaga";
 
 export default function* rootSaga() {
   yield all([
@@ -16,5 +17,6 @@ export default function* rootSaga() {
     fork(userSettingSaga),
     fork(updatePasswordSaga),
     fork(bookedTourSaga),
+    fork(signupSaga),
   ]);
 }
